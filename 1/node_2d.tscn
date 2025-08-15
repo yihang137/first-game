@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://bxbpdyff6yrou"]
+[gd_scene load_steps=3 format=3 uid="uid://bxbpdyff6yrou"]
+
+[ext_resource type="PackedScene" uid="uid://q3wq4vqinpmr" path="res://role.tscn" id="1_osonn"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_osonn"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="role" parent="." instance=ExtResource("1_osonn")]
+position = Vector2(-136, -41)
+scale = Vector2(0.101172, 0.101306)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 2)
+shape = SubResource("WorldBoundaryShape2D_osonn")

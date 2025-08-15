@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://q3wq4vqinpmr"]
+[gd_scene load_steps=4 format=3 uid="uid://q3wq4vqinpmr"]
 
 [ext_resource type="Texture2D" uid="uid://cm7lylm6eg64a" path="res://1/屏幕截图_2025-08-14_114436-removebg-preview.png" id="1_4t5ie"]
+[ext_resource type="Script" uid="uid://c0dyl8j8pcaqx" path="res://role.gd" id="1_qymgs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qymgs"]
 radius = 70.3278
 
 [node name="role" type="CharacterBody2D"]
+script = ExtResource("1_qymgs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(391.098, 293.954)
@@ -15,3 +17,5 @@ texture = ExtResource("1_4t5ie")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(389, 292)
 shape = SubResource("CircleShape2D_qymgs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
