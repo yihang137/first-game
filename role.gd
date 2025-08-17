@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 
-@export var speed := 160.0          # 水平最大速度
+@export var speed := 135.0          # 水平最大速度
 @export var accel := 1800.0         # 加速
 @export var friction := 2000.0      # 减速
-@export var jump_velocity := -300.0 # 跳跃初速度（负值向上）
+@export var jump_velocity := -270.0 # 跳跃初速度（负值向上）
 
 var gravity := 980.0
 

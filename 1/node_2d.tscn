@@ -1,8 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxbpdyff6yrou"]
+[gd_scene load_steps=6 format=3 uid="uid://bxbpdyff6yrou"]
 
 [ext_resource type="PackedScene" uid="uid://q3wq4vqinpmr" path="res://role.tscn" id="1_osonn"]
+[ext_resource type="Texture2D" uid="uid://x2xrubifwd6a" path="res://素材/New Piskel-1.png.png" id="2_otee8"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_osonn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wied2"]
+texture = ExtResource("2_otee8")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vccc1"]
+sources/1 = SubResource("TileSetAtlasSource_wied2")
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,11 +21,20 @@
 zoom = Vector2(4, 4)
 
 [node name="role" parent="." instance=ExtResource("1_osonn")]
-position = Vector2(-136, -41)
-scale = Vector2(0.101172, 0.101306)
+position = Vector2(-136, -26)
+scale = Vector2(0.0644401, 0.0642633)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1, 2)
 shape = SubResource("WorldBoundaryShape2D_osonn")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_vccc1")
+format = 2
+
+[node name="Layer0" type="TileMapLayer" parent="TileMap"]
+use_parent_material = true
+scale = Vector2(0.4, 0.4)
+tile_set = SubResource("TileSet_vccc1")

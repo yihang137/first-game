@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://q3wq4vqinpmr"]
 
-[ext_resource type="Texture2D" uid="uid://cm7lylm6eg64a" path="res://1/屏幕截图_2025-08-14_114436-removebg-preview.png" id="1_4t5ie"]
+[ext_resource type="Texture2D" uid="uid://cm7lylm6eg64a" path="res://素材/屏幕截图_2025-08-14_114436-removebg-preview.png" id="1_4t5ie"]
 [ext_resource type="Script" uid="uid://c0dyl8j8pcaqx" path="res://role.gd" id="1_qymgs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qymgs"]
