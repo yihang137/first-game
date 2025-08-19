@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://q3wq4vqinpmr"]
 
-[ext_resource type="Texture2D" uid="uid://cm7lylm6eg64a" path="res://素材/屏幕截图_2025-08-14_114436-removebg-preview.png" id="1_4t5ie"]
 [ext_resource type="Script" uid="uid://c0dyl8j8pcaqx" path="res://role.gd" id="1_qymgs"]
+[ext_resource type="Texture2D" uid="uid://yyi1x55edujx" path="res://素材/图片_20250819120803_28.png" id="2_qymgs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qymgs"]
 radius = 70.3278
@@ -10,12 +10,16 @@ radius = 70.3278
 script = ExtResource("1_qymgs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(391.098, 293.954)
-scale = Vector2(0.684259, 0.684259)
-texture = ExtResource("1_4t5ie")
+position = Vector2(395, 306)
+scale = Vector2(2.91038, 2.91038)
+texture = ExtResource("2_qymgs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(389, 292)
 shape = SubResource("CircleShape2D_qymgs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(400, 300)
+scale = Vector2(4, 4)
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
